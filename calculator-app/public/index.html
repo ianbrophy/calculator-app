@@ -18,9 +18,8 @@
     </header>
     
     <section id="calculator">
-      <h1>Simple Calculator App</h1>
-      
-         
+      <h1>Simple Calculator App</h1>   
+  
       <hr>
       <div id="calcDisplayResult"><span>{{ currentOp.join(' ') }} {{ numDisplay > 0 ? numDisplay : '' }} </span></div>
       
@@ -41,17 +40,6 @@
       <div class="button clear" v-on:click="buttonClear">C</div>
       <div class="button" v-on:click="buttonEquals">=</div>
       <div class="button" v-on:click="buttonAdd">+</div>
-    </div>
-
-    <div id="numsContainer" hidden>
-      <div id="numsBox">
-        <p><strong>Numbers:</strong></p>
-        <p>{{ nums.join(', ') }}</p>
-      </div>
-      <div id="operationBox">
-        <p><strong>Current Operation:</strong></p>
-        <p>{{ operation }}</p>
-      </div>
     </div>
     </section>
   </body>
