@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/assets/styles/main.css" />
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script> 
+    <script src="../src/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- Add some padding and a placeholder for branding, top bar, etc. -->
+    </header>
+    
+    <section id="calculator">
+      <h1>Simple Calculator App</h1>
+      
+         
+      <hr>
+      <div id="calcDisplayResult"><span>{{ currentOp.join(' ') }} {{ numDisplay > 0 ? numDisplay : '' }} </span></div>
+      
+      <div id="calcButtons"  >
+      <div class="button" v-on:click="buttonSeven">7</div>
+      <div class="button" v-on:click="buttonEight">8</div>
+      <div class="button" v-on:click="buttonNine">9</div>
+      <div class="button" v-on:click="buttonDiv">/</div>
+      <div class="button" v-on:click="buttonFour">4</div>
+      <div class="button" v-on:click="buttonFive">5</div>
+      <div class="button" v-on:click="buttonSix">6</div>
+      <div class="button" v-on:click="buttonMult">*</div>
+      <div class="button" v-on:click="buttonOne">1</div>
+      <div class="button" v-on:click="buttonTwo">2</div>
+      <div class="button" v-on:click="buttonThree">3</div>
+      <div class="button" v-on:click="buttonSub">-</div>
+      <div class="button" v-on:click="buttonZero">0</div>
+      <div class="button clear" v-on:click="buttonClear">C</div>
+      <div class="button" v-on:click="buttonEquals">=</div>
+      <div class="button" v-on:click="buttonAdd">+</div>
+    </div>
+
+    <div id="numsContainer" hidden>
+      <div id="numsBox">
+        <p><strong>Numbers:</strong></p>
+        <p>{{ nums.join(', ') }}</p>
+      </div>
+      <div id="operationBox">
+        <p><strong>Current Operation:</strong></p>
+        <p>{{ operation }}</p>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding: 5px;
+}
+
+h1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: auto;
+  margin-bottom: 0;
+  border-radius: 5px;
+  background-color: #1b4799;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  justify-content: center;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  max-width: 400px;
+}
+
+#calcDisplayResult {
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  gap: 10px;
+  float: right;
+  background: #e4e4e4;
+  border: #7a7a7a 1px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  height: 60px;
+}
+
+#calcDisplayResult:hover {
+  background: #c6d1fd;
+}
+#calcDisplayResult span {
+  font-weight: bold;
+}
+
+#calcButtons {
+  margin: 20px auto 0px 70px;
+  border-radius: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 200px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #c6d1fd;
+}
+
+.button.clear:hover {
+  background-color: #ff0404;
+}
+
+#numsContainer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#numsBox,
+#operationBox {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+#numsBox p,
+#operationBox p {
+  margin: 0;
+}
